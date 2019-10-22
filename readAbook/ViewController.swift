@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  readAbook
 //
@@ -13,14 +12,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let book = Book(title: "Steve Jobs", author: "Walter Issacson", ISBN: "ABC0123456789")
+        //MARK: array of example pages (Array de paginas de ejemplo)
+                      
+        let page1 = Page (number: 1, text: "Primera peazo de ....")
+        let page2 = Page (number: 2, text: "Terce... Segunda viene ahora compañero")
+        
+        let pages = [page1, page2]
+        
+        print(page1.text, page2.text)
+        
+        // MARK: Book index and page models (Indice libros y modelos de pagina)
+        let book = Book(title: "Steve Jobs", author: "Walter Issacson", ISBN: "ABC0123456789", pages: pages)
         print("Titulo: \(book.title), Autor: \(book.author), ISBN \(book.ISBN)")
         
-        let page = Page(number: 2, text: "hola")
-        print("Numero de paginas: \(page.number), tipo de texto: \(page.text)")
-        
+        // MARK: Obtaining the text of the first page (Obtencion del texto de la primera pagina)
+        let firstPage = book.pages[0]
+                print(firstPage.text)
+                       
     }
-
 
 }
 

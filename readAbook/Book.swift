@@ -13,12 +13,15 @@ class Book {
     let title: String
     let author: String
     let ISBN: String
+    let pages: [Page]
+
     
     // MARK: Initialize properties of the Book class (Inicializar propiedades de la clase Book)
-    init(title: String, author: String, ISBN: String){
+    init(title: String, author: String, ISBN: String, pages: [Page]){
         self.title = title
         self.author = author
         self.ISBN = ISBN
+        self.pages = pages
     }
     
 }

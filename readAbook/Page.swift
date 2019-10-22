@@ -12,7 +12,7 @@ class Page {
     let number: Int
     let text: String
     
-    //MARK: Initialize properties of the Page class (Inicializar propiedades de la clase Page)
+    // MARK: Initialize properties of the Page class (Inicializar propiedades de la clase Page)
     init(number: Int, text: String){
     self.number = number
     self.text = text
