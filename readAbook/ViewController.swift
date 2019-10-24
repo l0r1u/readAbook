@@ -8,28 +8,48 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: Create a book list, array type (Crear listado de libros, tipo array)
+    var books: [Book]? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: array of example pages (Array de paginas de ejemplo)
-                      
-        let page1 = Page (number: 1, text: "Primera peazo de ....")
-        let page2 = Page (number: 2, text: "Terce... Segunda viene ahora compañero")
+        setUpBooks()
+
+        }
+
+    func setUpBooks (){
+        // MARK: array of example pages (Array de paginas de ejemplo)
+                let page1 = Page (number: 1, text: "Primera peazo de ....")
+                let page2 = Page (number: 2, text: "Terce... Segunda viene ahora compañero")
+                
+                let pages = [page1, page2]
+                
+                print(page1.text, page2.text)
+                
+                // MARK: Book index and page models (Indice libros y modelos de pagina)
+                let book1 = Book(title: "Steve Jobs", author: "Walter Issacson", ISBN: "ABC0123456789", pages: pages)
+                let book2 = Book(title: "El buen de Bill", author: "un tal MIchael", ISBN: "ABD0123456789", pages: pages)
+                print("Titulo: \(book1.title), Autor: \(book1.author), ISBN \(book1.ISBN)")
+                
+                // MARK: Obtaining the text of the first page (Obtencion del texto de la primera pagina)
+                let firstPage = book1.pages[0]
+                        print(firstPage.text)
+                
+                // MARK: Create a Array of objects type books (Crear array de objetos tipo books)
         
-        let pages = [page1, page2]
-        
-        print(page1.text, page2.text)
-        
-        // MARK: Book index and page models (Indice libros y modelos de pagina)
-        let book = Book(title: "Steve Jobs", author: "Walter Issacson", ISBN: "ABC0123456789", pages: pages)
-        print("Titulo: \(book.title), Autor: \(book.author), ISBN \(book.ISBN)")
-        
-        // MARK: Obtaining the text of the first page (Obtencion del texto de la primera pagina)
-        let firstPage = book.pages[0]
-                print(firstPage.text)
-                       
+        //Desempaquetado no seguro
+            //  self.books = [book1, book2]
+            //  print(self.books!)
+
+                //Desempaquetado seguro, modo "if let", OJO CON LA PIRAMIDE DE LA PERDICION
+                if let unrappedBooks = self.books {
+                    print(unrappedBooks)
+                    
+                //Desempaquetado seguro, modo "guard",
+                    guard let books = books else {return}
+                    print(books)
+        }
     }
-
 }
-
