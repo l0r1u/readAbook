@@ -65,10 +65,10 @@
 				8A3E8DC0235E2BB30080E875 /* ViewController.swift */,
 				8A3E8DD0235E32AA0080E875 /* Book.swift */,
 				8A3E8DD2235E3B3B0080E875 /* Page.swift */,
-				8A3E8DC2235E2BB30080E875 /* Main.storyboard */,
 				8A3E8DC5235E2BB60080E875 /* Assets.xcassets */,
-				8A3E8DC7235E2BB60080E875 /* LaunchScreen.storyboard */,
 				8A3E8DCA235E2BB60080E875 /* Info.plist */,
+				8A3E8DC2235E2BB30080E875 /* Main.storyboard */,
+				8A3E8DC7235E2BB60080E875 /* LaunchScreen.storyboard */,
 			);
 			path = readAbook;
 			sourceTree = "<group>";
