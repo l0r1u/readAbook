@@ -11,11 +11,21 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    //MARK: Se crea el objeto Window, que sera unico
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        // MARK: Se le dan las propiedades al objeto Window, que se adapte a la pantalla y que sea visible
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        window?.rootViewController = ViewController()
+        
         return true
+        
     }
 
     // MARK: UISceneSession Lifecycle

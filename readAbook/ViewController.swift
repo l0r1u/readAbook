@@ -15,8 +15,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //MARK: Asignar un color de fondo para confirmar que funciona
+        self.view.backgroundColor = .lightGray
+        
         setUpBooks()
-
+        
         }
 
     func setUpBooks (){
